@@ -16,7 +16,7 @@ https://rules.sonarsource.com/cpp/RSPEC-912
 ## CWE UNCAUGHT_EXCEPTION
 Move asignment with containers might throw
 * polymorphic allocators
-* std::copy ot memcpy
+* std::copy/memcpy
 * performance
 ### std::basic_string<CharT,Traits,Allocator>::assign
 https://en.cppreference.com/w/cpp/string/basic_string/assign
