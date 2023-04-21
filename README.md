@@ -22,3 +22,5 @@ Move asignment with containers might throw
 https://en.cppreference.com/w/cpp/string/basic_string/assign
 ### Allocator propagation policies in your new modern C++ containers
 https://stackoverflow.com/questions/54703727/allocator-propagation-policies-in-your-new-modern-c-containers
+### Exception in move assignment operator
+https://stackoverflow.com/questions/34398675/exception-in-move-assignment-operator
