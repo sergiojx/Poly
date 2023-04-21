@@ -11,4 +11,14 @@ https://jira.sonarsource.com/browse/RSPEC-941
 Violation hapens because not an array context
 ## M5-14-1
 https://learn.adacore.com/courses/SPARK_for_the_MISRA_C_Developer/chapters/06_side_effects.html#:~:text=The%20reason%20is%20that%20the,rule%20forbids%20the%20code%20above.  
-https://rules.sonarsource.com/cpp/RSPEC-912  
+https://rules.sonarsource.com/cpp/RSPEC-912
+# Common Weakness Enumeration
+## CWE UNCAUGHT_EXCEPTION
+Move asignment with containers might throw
+* polymorphic allocators
+* std::copy ot memcpy
+* performance
+### std::basic_string<CharT,Traits,Allocator>::assign
+https://en.cppreference.com/w/cpp/string/basic_string/assign
+### Allocator propagation policies in your new modern C++ containers
+https://stackoverflow.com/questions/54703727/allocator-propagation-policies-in-your-new-modern-c-containers
