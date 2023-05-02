@@ -46,24 +46,30 @@ https://firefox-source-docs.mozilla.org/code-quality/static-analysis/writing-new
 
 
 # Matcher notes
-
+```
 m functionDecl().bind("x") 
+```
 this will prevent header files code form being parsed and lots of "unrelated" Matchers showing up
+```
 m functionDecl(isExpansionInMainFile()).bind("x") 
-
+```
 functionDecl is too generic and will match
-CXXDestructorDecl
-CXXMethodDecl
-CXXConstructorDecl
-CXXMethodDecl
 
+CXXDestructorDecl 
+CXXMethodDecl 
+CXXConstructorDecl 
+CXXMethodDecl 
+
+```
 m namedDecl(isExpansionInMainFile()).bind("x") this is even more general, and it will match every declararion
-CXXRecordDecl
-FieldDecl
+```
+CXXRecordDecl 
+FieldDecl 
 
-CXXRecordDecl   FieldDecl
-
+CXXRecordDecl   FieldDecl 
+```
 m cxxRecordDecl(hasDescendant(fieldDecl(isExpansionInMainFile()).bind("classFieldDeclaration"))).bind("classDeclaration")
+```
 ### it will match each class field declaration
 ```
 m fieldDecl(isExpansionInMainFile(), hasParent(cxxRecordDecl().bind("classDeclaration"))).bind("classFieldDeclaration")
