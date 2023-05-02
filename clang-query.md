@@ -18,10 +18,17 @@ ninja clang-tidy
 
 
 ## clang-query
-### set bind-root false
-### set traversal     IgnoreUnlessSpelledInSource
-### set output dump
-### set output diag
+```
+$ clang-query.exe test-class1.cpp -- 
+
+clang-query>
+```
+```
+clang-query> set bind-root false
+clang-query> set traversal     IgnoreUnlessSpelledInSource
+clang-query> set output dump
+clang-query> set output diag
+```
 
 ### Exploring Clang Tooling, Part 0: Building Your Code with Clang
 https://devblogs.microsoft.com/cppblog/exploring-clang-tooling-part-0-building-your-code-with-clang/
