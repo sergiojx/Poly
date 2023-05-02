@@ -86,3 +86,51 @@ m fieldDecl(isExpansionInMainFile(), hasParent(cxxRecordDecl()), unless(has(expr
 m cxxRecordDecl(isExpansionInMainFile(),  	forEach(fieldDecl(hasParent(cxxRecordDecl()), unless(has(expr()))).bind("member"))).bind("class")
 ```
 
+# test_class1.cpp
+```
+#include <array>
+#include <iostream>
+#include <string>
+
+class Test {
+public:
+  class X {
+    int op1() {
+      int r;
+      r = int_xa_nsdmi;
+      int_xb_nsdmi = int_xa_nsdmi;
+      return r;
+    }
+    int int_x_var;
+    int int_xa_nsdmi{2};
+    int int_xb_nsdmi = 1;
+  };
+
+  std::string ops() {
+    std::array<int, 3> array_nsdmi_var;
+    if (array_nsdmi_var.at(0)) {
+      return "OK";
+    } else {
+      return "XX";
+    }
+  }
+  int getIntVar() const { return int_var_; };
+
+  bool getBoolVar() const { return bool_var_; };
+
+  std::string getString() const { return string_var_; };
+
+  std::array<int, 3> getArray() const { return array_var_; };
+
+private:
+  int int_var_;
+  bool bool_var_;
+  std::string string_var_;
+  std::array<int, 3> array_var_;
+
+  int int_nsdmi_var_{0};
+  bool bool_nsdmi_var_ = true;
+  std::string string_nsdmi_var_{"lola"};
+  std::array<int, 3> array_nsdmi_var_ = {1, 2, 3};
+};
+```
